@@ -168,9 +168,7 @@ int operand2(char* fileName, char* actionLine, int column, int trans, int opcode
 	strcpy(buf, actionLine);
 
 
-	// buf = #1000000000000\0r5\0   \0
-	// operand1 = #10000000000
-	// operand2 = r5\0
+	
 	operand1 = strtok(buf + column, ", \t\n\v\f\r");
 	column += strlen(operand1);
 	if (strlen(operand1) == 0) { /*there is no operand - ERROR.*/
